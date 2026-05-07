@@ -1,0 +1,46 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Configuracion local de editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs y temporales
+*.log
+*.tmp
+*.temp
+tmp/
+temp/
+cache/
+
+# Dependencias si en el futuro se usa Node, Composer u otras herramientas
+node_modules/
+vendor/
+
+# Archivos de entorno local
+.env
+.env.local
+
+# Copias de seguridad o exports locales
+*.bak
+*.backup
+*.sql.gz
+*.zip
+*.rar
+*.7z
+
+# Archivos generados por suites ofimaticas
+~$*
+*.lock
+
+# Capturas o pruebas locales que no formen parte de la documentacion final
+capturas_temporales/
+pruebas/
+
+# Configuracion local de XAMPP o copias externas del proyecto
+xampp/
+htdocs/

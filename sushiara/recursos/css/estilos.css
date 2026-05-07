@@ -1,0 +1,1175 @@
+:root {
+  /* Variables globales de color para mantener la marca consistente. */
+  --negro: #111111;
+  --carbon: #1b1b1b;
+  --gris: #666666;
+  --gris-claro: #eeeeee;
+  --fondo: #f7f7f7;
+  --blanco: #ffffff;
+  --rojo: #b91c1c;
+  --rojo-oscuro: #8f1515;
+  --dorado: #b8944f;
+}
+
+* {
+  /* Hace que padding y border cuenten dentro del ancho/alto del elemento. */
+  box-sizing: border-box;
+}
+
+body {
+  /* Estilo base de toda la web. */
+  margin: 0;
+  color: var(--negro);
+  background: var(--fondo);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.barra-superior {
+  /* Barra de navegacion superior. En la home es transparente; en paginas internas se oscurece. */
+  background: rgba(0, 0, 0, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+}
+
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.logo-nav {
+  display: block;
+  width: 108px;
+  height: 64px;
+  object-fit: contain;
+  background: transparent;
+  padding: 0;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.34));
+}
+
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
+.navbar .nav-link:hover {
+  color: var(--blanco);
+}
+
+.btn,
+.form-control,
+.form-select,
+.badge,
+.navbar-toggler {
+  border-radius: 0;
+}
+
+.btn-sushi {
+  color: var(--blanco);
+  background: var(--rojo);
+  border: 1px solid var(--rojo);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.btn-sushi:hover {
+  color: var(--blanco);
+  background: var(--rojo-oscuro);
+  border-color: var(--rojo-oscuro);
+}
+
+.btn-outline-sushi {
+  color: var(--rojo);
+  background: var(--blanco);
+  border: 1px solid var(--rojo);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.btn-outline-sushi:hover {
+  color: var(--blanco);
+  background: var(--rojo);
+}
+
+.portada {
+  /* Hero principal de la home con imagen de fondo y capa oscura. */
+  color: var(--blanco);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.58)),
+    url('https://images.unsplash.com/photo-1501595091296-3aa970afb3ff?auto=format&fit=crop&w=1800&q=85') center / cover no-repeat;
+  border-bottom: 1px solid #000;
+  margin-top: -85px;
+}
+
+.min-vh-portada {
+  min-height: 100vh;
+  padding-top: 140px;
+  padding-bottom: 70px;
+}
+
+.portada h1 {
+  margin: 0;
+  font-size: clamp(3.4rem, 8vw, 7.3rem);
+  font-weight: 900;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.portada h1 span {
+  font-weight: 300;
+}
+
+.portada .lead {
+  max-width: 760px;
+  margin: 16px auto 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(1.2rem, 2.4vw, 1.95rem);
+}
+
+.portada-contenido {
+  width: min(900px, 100%);
+}
+
+.portada-superior {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.logo-hero {
+  width: min(205px, 55vw);
+  height: auto;
+  margin-bottom: 26px;
+  background: transparent;
+  padding: 0;
+  filter: drop-shadow(0 0 16px rgba(255, 255, 255, 0.42));
+}
+
+.seccion-editorial,
+.acciones-principales {
+  /* Secciones principales de la home: quienes somos y llamadas a la accion. */
+  padding: 76px 0;
+  background: var(--blanco);
+}
+
+.seccion-editorial h2,
+.accion-grande h2,
+.bloque-reservas h2,
+.horarios h2 {
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.imagen-editorial {
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+}
+
+.texto-editorial {
+  color: var(--gris);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.dato-editorial {
+  min-height: 108px;
+  padding: 18px;
+  border: 1px solid #d8d8d8;
+}
+
+.dato-editorial strong {
+  display: block;
+  font-size: 2rem;
+}
+
+.dato-editorial span {
+  color: var(--gris);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.acciones-principales {
+  padding-top: 0;
+}
+
+.accion-grande {
+  /* Bloques grandes de reservar mesa y hacer pedido. */
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 34px;
+  color: var(--blanco);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.accion-grande::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.58);
+}
+
+.accion-grande > * {
+  position: relative;
+  z-index: 1;
+}
+
+.accion-grande p:not(.subtitulo) {
+  max-width: 520px;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.accion-reserva {
+  background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1100&q=85');
+}
+
+.accion-pedido {
+  background-image: url('https://images.unsplash.com/photo-1617196034183-421b4917c92d?auto=format&fit=crop&w=1200&q=90');
+  background-position: center 42%;
+}
+
+.estado-abierto,
+.badge-sushi {
+  background: var(--rojo);
+  color: var(--blanco);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.panel-local,
+.mini-dato,
+.pedido-panel,
+.producto-linea,
+.bloque-cuadrado,
+.reserva-form,
+.tarjeta-opinion {
+  background: var(--blanco);
+  border: 1px solid #d8d8d8;
+  box-shadow: none;
+}
+
+.panel-local {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  color: var(--negro);
+}
+
+.panel-local > div {
+  padding: 18px;
+  border-right: 1px solid #d8d8d8;
+}
+
+.panel-local > div:last-child {
+  border-right: 0;
+}
+
+.panel-local strong,
+.mini-dato strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 1rem;
+}
+
+.texto-suave,
+.mini-dato span {
+  color: var(--gris);
+}
+
+.subtitulo,
+.titulo-lateral {
+  color: var(--rojo);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.franja-info {
+  padding: 22px 0;
+  background: var(--negro);
+}
+
+.horarios {
+  background: var(--blanco);
+}
+
+.horario-linea {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 0;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.horario-linea:last-child {
+  border-bottom: 0;
+}
+
+.home-limpia .acciones-principales {
+  background: #0f0f0f;
+  padding: 72px 0;
+}
+
+.home-limpia .seccion-editorial {
+  padding-top: 92px;
+}
+
+.mini-dato {
+  min-height: 86px;
+  padding: 18px;
+}
+
+.categorias-sticky,
+.pedido-sticky {
+  /* Mantiene categorias y carrito visibles al hacer scroll en escritorio. */
+  position: sticky;
+  top: 96px;
+}
+
+.categorias-menu {
+  display: flex;
+  overflow-x: auto;
+}
+
+.categoria-btn {
+  width: 100%;
+  padding: 12px 14px;
+  color: var(--carbon);
+  background: var(--blanco);
+  border: 1px solid #d8d8d8;
+  font-weight: 800;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.categoria-btn.active,
+.categoria-btn:hover {
+  color: var(--blanco);
+  background: var(--negro);
+  border-color: var(--negro);
+}
+
+.buscador-carta {
+  width: min(100%, 360px);
+}
+
+.form-control,
+.form-select {
+  border: 1px solid #cfcfcf;
+  min-height: 44px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--negro);
+  box-shadow: 0 0 0 0.18rem rgba(0, 0, 0, 0.1);
+}
+
+.encabezado-categoria {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 28px 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--negro);
+}
+
+.encabezado-categoria h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.encabezado-categoria span {
+  color: var(--gris);
+  font-weight: 700;
+}
+
+.lista-productos {
+  display: grid;
+  gap: 12px;
+}
+
+.producto-linea {
+  /* Tarjeta horizontal de cada producto de la carta. */
+  display: grid;
+  grid-template-columns: 128px 1fr;
+  min-height: 150px;
+  overflow: hidden;
+}
+
+.producto-linea img {
+  width: 128px;
+  height: 100%;
+  object-fit: cover;
+  background: #e8e8e8;
+  border-right: 1px solid #d8d8d8;
+}
+
+.producto-linea[data-category="Bebidas"] {
+  /* Las bebidas usan medidas especiales para que latas/botellas no se recorten. */
+  grid-template-columns: 138px 1fr;
+  min-height: 168px;
+  align-items: stretch;
+}
+
+.producto-linea[data-category="Bebidas"] img {
+  width: 138px;
+  height: 168px;
+  object-fit: contain;
+  object-position: center;
+  align-self: start;
+  padding: 14px;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 1) 0 34%, rgba(244, 244, 244, 1) 35% 62%, rgba(224, 224, 224, 1) 100%);
+  border-right: 1px solid #d8d8d8;
+  filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 0.18));
+}
+
+.producto-linea[data-category="Bebidas"] .producto-cuerpo {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(250, 250, 250, 1));
+}
+
+.producto-linea[data-category="Bebidas"]:hover img {
+  filter: drop-shadow(0 15px 14px rgba(0, 0, 0, 0.22));
+}
+
+.producto-cuerpo {
+  padding: 16px;
+}
+
+.producto-cuerpo h4 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
+.producto-cuerpo p {
+  min-height: 46px;
+  margin: 8px 0 12px;
+  color: var(--gris);
+  line-height: 1.45;
+}
+
+.pedido-panel {
+  /* Panel lateral del carrito y formulario de pedido. */
+  padding: 18px;
+}
+
+.pago-simulado,
+.reserva-sin-pago {
+  display: grid;
+  gap: 3px;
+  padding: 12px;
+  border: 1px solid #d8d8d8;
+  background: #f7f7f7;
+}
+
+.pago-simulado span,
+.reserva-sin-pago strong {
+  color: var(--rojo);
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.pago-simulado strong,
+.reserva-sin-pago span {
+  color: var(--negro);
+  font-size: 0.88rem;
+}
+
+.pago-opcion {
+  padding: 12px;
+  border: 1px solid #d8d8d8;
+  background: var(--blanco);
+}
+
+.pago-aviso {
+  display: grid;
+  gap: 4px;
+  color: var(--gris);
+  font-size: 0.9rem;
+}
+
+.pago-aviso strong {
+  color: var(--negro);
+}
+
+.contador-carrito {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  color: var(--blanco);
+  background: var(--negro);
+  font-weight: 900;
+}
+
+.empty-cart {
+  margin: 0;
+  color: var(--gris);
+}
+
+.cart-items {
+  display: grid;
+  gap: 12px;
+}
+
+.cart-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dedede;
+}
+
+.cart-row-info span {
+  display: block;
+  color: var(--gris);
+  font-size: 0.9rem;
+}
+
+.quantity-controls {
+  display: grid;
+  grid-template-columns: 30px 28px 30px;
+  align-items: center;
+  text-align: center;
+}
+
+.quantity-controls button {
+  width: 30px;
+  height: 30px;
+  color: var(--negro);
+  background: var(--gris-claro);
+  border: 1px solid #cfcfcf;
+  font-weight: 900;
+}
+
+.resumen-precio {
+  display: grid;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 2px solid var(--negro);
+}
+
+.resumen-precio div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.resumen-precio .total {
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
+.bloque-reservas {
+  color: var(--blanco);
+  background: var(--carbon);
+}
+
+.bloque-reservas .subtitulo {
+  color: var(--dorado);
+}
+
+.bloque-reservas .reserva-form {
+  color: var(--negro);
+  padding: 24px;
+}
+
+.reseñas {
+  background: #f3f3f3;
+}
+
+.reseñas h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.puntuacion-global {
+  display: grid;
+  justify-items: start;
+  gap: 3px;
+  padding: 24px;
+  color: var(--blanco);
+  background: var(--negro);
+  border-left: 6px solid var(--rojo);
+}
+
+.puntuacion-global strong {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1;
+}
+
+.puntuacion-global span,
+.estrellas {
+  color: #f5c451;
+  letter-spacing: 2px;
+}
+
+.puntuacion-global p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.tarjeta-opinion {
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  padding: 26px;
+  color: var(--carbon);
+  background: var(--blanco);
+  border: 1px solid #d5d5d5;
+  border-top: 5px solid var(--negro);
+  font-size: 1.05rem;
+}
+
+.tarjeta-opinion.destacada {
+  border-top-color: var(--rojo);
+  transform: translateY(-10px);
+}
+
+.tarjeta-opinion p {
+  margin: 18px 0;
+  color: #333;
+  line-height: 1.65;
+}
+
+.tarjeta-opinion strong {
+  display: block;
+  margin-top: auto;
+  color: var(--rojo);
+  font-size: 1.05rem;
+}
+
+.tarjeta-opinion small {
+  color: var(--gris);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.pie {
+  /* Footer publico con logo, enlaces y contacto. */
+  padding: 54px 0 22px;
+  color: rgba(255, 255, 255, 0.82);
+  background: var(--negro);
+}
+
+.pie strong,
+.pie h3 {
+  color: var(--blanco);
+  text-transform: uppercase;
+}
+
+.pie h3 {
+  margin-bottom: 16px;
+  font-size: 0.92rem;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.pie p {
+  max-width: none;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  line-height: 1.7;
+  white-space: nowrap;
+}
+
+.pie p span {
+  display: block;
+}
+
+.pie .col-lg-5:first-child {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.pie a {
+  display: block;
+  width: fit-content;
+  margin-bottom: 9px;
+  color: rgba(255, 255, 255, 0.68);
+  font-weight: 700;
+}
+
+.pie a:hover {
+  color: var(--blanco);
+}
+
+.logo-footer {
+  width: 150px;
+  flex: 0 0 150px;
+  height: auto;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+}
+
+.footer-lista {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.68);
+  list-style: none;
+}
+
+.pie-inferior {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 42px;
+  padding-top: 18px;
+  color: rgba(255, 255, 255, 0.48);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  font-size: 0.9rem;
+}
+
+.form-message {
+  min-height: 22px;
+  margin-bottom: 0;
+  font-weight: 800;
+}
+
+.form-message.success {
+  color: #166534;
+}
+
+.form-message.error {
+  color: var(--rojo);
+}
+
+.pagina-simple {
+  background: var(--fondo);
+}
+
+.pagina-simple .barra-superior {
+  background: var(--negro);
+  border-bottom: 4px solid var(--rojo);
+}
+
+.cabecera-pedido {
+  /* Cabecera visual de la pagina de pedido. */
+  padding: 64px 0;
+  color: var(--blanco);
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.48)),
+    url('https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?auto=format&fit=crop&w=1600&q=85') center / cover no-repeat;
+}
+
+.cabecera-reserva {
+  /* Cabecera visual de la pagina de reservas. */
+  padding: 64px 0;
+  color: var(--blanco);
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.45)),
+    url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=85') center / cover no-repeat;
+}
+
+.cabecera-reserva h1 {
+  margin: 0;
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.cabecera-reserva p:not(.subtitulo) {
+  max-width: 640px;
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.12rem;
+}
+
+.reserva-main {
+  background: #f3f3f3;
+}
+
+.reserva-info {
+  height: 100%;
+  background: var(--blanco);
+  border: 1px solid #d8d8d8;
+}
+
+.reserva-info img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.reserva-info h2 {
+  font-size: clamp(1.7rem, 3vw, 2.7rem);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.reserva-info ul {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding-left: 18px;
+  color: var(--gris);
+}
+
+.admin-page main {
+  /* Fondo especial para paneles internos de administracion. */
+  background: #f3f3f3;
+}
+
+.cabecera-admin {
+  padding: 54px 0;
+  color: var(--blanco);
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.58)),
+    url('https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=1600&q=85') center / cover no-repeat;
+}
+
+.cabecera-admin h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.cabecera-admin p:not(.subtitulo) {
+  max-width: 680px;
+  margin: 12px 0 0;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.admin-metrica {
+  min-height: 124px;
+  padding: 24px;
+  color: var(--blanco);
+  background: var(--negro);
+  border-left: 6px solid var(--rojo);
+}
+
+.admin-metrica span {
+  display: block;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.admin-metrica strong {
+  display: block;
+  margin-top: 8px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+}
+
+.admin-card {
+  padding: 24px;
+  background: var(--blanco);
+  border: 1px solid #d8d8d8;
+}
+
+.admin-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding-bottom: 18px;
+  border-bottom: 2px solid var(--negro);
+}
+
+.admin-card-header h2 {
+  margin: 10px 0 0;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.admin-card-header strong {
+  display: block;
+  font-size: 1.6rem;
+}
+
+.admin-card-header span:not(.badge) {
+  color: var(--gris);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.admin-nota {
+  padding: 14px;
+  color: var(--gris);
+  background: #f4f4f4;
+  border: 1px solid #d8d8d8;
+}
+
+.admin-estado-form {
+  display: grid;
+  grid-template-columns: 1fr 220px auto;
+  align-items: end;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 16px;
+  background: #f4f4f4;
+  border: 1px solid #d8d8d8;
+}
+
+.admin-estado-form label {
+  color: var(--gris);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.admin-tabla-form {
+  display: flex;
+  gap: 8px;
+  min-width: 190px;
+}
+
+.enlace-interno {
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.42) !important;
+  font-size: 0.85rem;
+}
+
+.login-page {
+  /* Fondo de la pantalla de login interno. */
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.78)),
+    url('https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=1600&q=85') center / cover no-repeat;
+}
+
+.login-admin {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+}
+
+.login-panel {
+  width: min(100%, 500px);
+  padding: 34px 34px 34px;
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
+  text-align: left;
+}
+
+.login-panel h1 {
+  margin: 0;
+  font-size: clamp(1.7rem, 5vw, 2.35rem);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+.login-logo {
+  display: block;
+  width: 158px;
+  height: auto;
+  margin: 0 auto 22px;
+}
+
+.login-panel .subtitulo {
+  text-align: center;
+}
+
+.login-panel h1 {
+  text-align: center;
+}
+
+.login-panel .form-control {
+  min-height: 48px;
+  border: 1px solid #1f1f1f;
+}
+
+.login-panel form {
+  margin-top: 28px !important;
+}
+
+.login-volver {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.cabecera-pedido h1 {
+  margin: 0;
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.cabecera-pedido p:not(.subtitulo) {
+  max-width: 640px;
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.12rem;
+}
+
+.pedido-datos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--negro);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.pedido-datos div {
+  padding: 18px;
+  border-right: 1px solid #d8d8d8;
+}
+
+.pedido-datos div:last-child {
+  border-right: 0;
+}
+
+.pedido-datos span {
+  display: block;
+  color: var(--gris);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.pedido-datos strong {
+  display: block;
+  margin-top: 5px;
+}
+
+.producto-linea:hover {
+  border-color: var(--negro);
+  transform: translateY(-2px);
+}
+
+.producto-linea {
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.items-table th,
+.items-table td {
+  padding: 11px;
+  text-align: left;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.items-table th {
+  color: var(--gris);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.order-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin: 18px 0;
+}
+
+.order-meta dt {
+  color: var(--gris);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.order-meta dd {
+  margin: 4px 0 0;
+}
+
+@media (max-width: 991px) {
+  .categorias-sticky,
+  .pedido-sticky {
+    position: static;
+  }
+
+  .categoria-btn {
+    width: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 680px) {
+  .min-vh-portada {
+    min-height: 460px;
+  }
+
+  .panel-local {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-local > div {
+    border-right: 0;
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  .producto-linea {
+    grid-template-columns: 96px 1fr;
+  }
+
+  .producto-linea img {
+    width: 96px;
+  }
+
+  .producto-linea[data-category="Bebidas"] {
+    grid-template-columns: 106px 1fr;
+  }
+
+  .producto-linea[data-category="Bebidas"] img {
+    width: 106px;
+    height: 148px;
+    padding: 10px;
+  }
+
+  .pie-inferior {
+    flex-direction: column;
+  }
+
+  .pie p {
+    white-space: normal;
+  }
+
+  .pie .col-lg-5:first-child {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .login-panel {
+    padding: 28px 22px;
+  }
+
+  .login-panel h1 {
+    font-size: clamp(1.55rem, 8vw, 2rem);
+  }
+
+  .login-logo {
+    width: 132px;
+  }
+}
