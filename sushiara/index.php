@@ -6,7 +6,7 @@
     <title>Shushiara</title>
     <link rel="icon" type="image/svg+xml" href="recursos/imagenes/logo-shushiara.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="recursos/css/estilos.css">
+    <link rel="stylesheet" href="recursos/css/estilos.css?v=banderas-footer-3">
 </head>
 <body class="inicio home-limpia">
     <!-- Navegacion principal publica. -->
@@ -20,12 +20,12 @@
             </button>
             <div class="collapse navbar-collapse" id="menuSuperior">
                 <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#quienes-somos">Quienes somos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="paginas/pedido.php">Carta</a></li>
-                    <li class="nav-item"><a class="nav-link" href="paginas/pedido.php">Haz tu pedido</a></li>
-                    <li class="nav-item"><a class="nav-link" href="paginas/reservar.php">Reserva</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#horarios">Horarios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#inicio" data-i18n="inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#quienes-somos" data-i18n="quienesSomos">Quienes somos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="paginas/pedido.php" data-i18n="carta">Carta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="paginas/pedido.php" data-i18n="hazPedido">Haz tu pedido</a></li>
+                    <li class="nav-item"><a class="nav-link" href="paginas/reservar.php" data-i18n="reserva">Reserva</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#horarios" data-i18n="horarios">Horarios</a></li>
                 </ul>
             </div>
         </div>
@@ -37,12 +37,12 @@
             <div class="min-vh-portada d-flex align-items-center justify-content-center text-center">
                 <div class="portada-contenido">
                     <img class="logo-hero" src="recursos/imagenes/logo-shushiara.svg" alt="Shushiara">
-                    <p class="portada-superior">Sushi tradicional con alma moderna</p>
+                    <p class="portada-superior" data-i18n="heroSuperior">Sushi tradicional con alma moderna</p>
                     <h1><span>Fresh is</span><br>Boring</h1>
-                    <p class="lead">La revolucion del sushi tradicional en Shushiara.</p>
+                    <p class="lead" data-i18n="heroLead">La revolucion del sushi tradicional en Shushiara.</p>
                     <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
-                        <a class="btn btn-light btn-lg" href="paginas/reservar.php">Reservar mesa</a>
-                        <a class="btn btn-outline-light btn-lg" href="paginas/pedido.php">Hacer pedido</a>
+                        <a class="btn btn-light btn-lg" href="paginas/reservar.php" data-i18n="reservarMesa">Reservar mesa</a>
+                        <a class="btn btn-outline-light btn-lg" href="paginas/pedido.php" data-i18n="hacerPedido">Hacer pedido</a>
                     </div>
                 </div>
             </div>
@@ -58,14 +58,14 @@
                         <img class="imagen-editorial" src="https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?auto=format&fit=crop&w=1200&q=85" alt="Pescado fresco para sushi">
                     </div>
                     <div class="col-lg-6">
-                        <p class="subtitulo">Quienes somos</p>
-                        <h2>Pescado fresco, tecnica japonesa y una experiencia directa.</h2>
-                        <p class="texto-editorial">Shushiara es un restaurante de sushi pensado para disfrutar en el local y tambien en casa. Preparamos arroz a diario, cortamos pescado fresco y trabajamos una carta clara: piezas tradicionales, rolls especiales, entrantes y combos para compartir.</p>
-                        <p class="texto-editorial">Puedes reservar mesa para venir al local o realizar tu pedido a domicilio desde nuestra carta online.</p>
+                        <p class="subtitulo" data-i18n="quienesSub">Quienes somos</p>
+                        <h2 data-i18n="quienesTitulo">Pescado fresco, tecnica japonesa y una experiencia directa.</h2>
+                        <p class="texto-editorial" data-i18n="quienesTexto1">Shushiara es un restaurante de sushi pensado para disfrutar en el local y tambien en casa. Preparamos arroz a diario, cortamos pescado fresco y trabajamos una carta clara: piezas tradicionales, rolls especiales, entrantes y combos para compartir.</p>
+                        <p class="texto-editorial" data-i18n="quienesTexto2">Puedes reservar mesa para venir al local o realizar tu pedido a domicilio desde nuestra carta online.</p>
                         <div class="row g-3 mt-3">
-                            <div class="col-sm-4"><div class="dato-editorial"><strong>4,8</strong><span>valoracion media</span></div></div>
-                            <div class="col-sm-4"><div class="dato-editorial"><strong>30-45</strong><span>minutos entrega</span></div></div>
-                            <div class="col-sm-4"><div class="dato-editorial"><strong>00:00</strong><span>viernes y sabado</span></div></div>
+                            <div class="col-sm-4"><div class="dato-editorial"><strong>4,8</strong><span data-i18n="valoracionMedia">valoracion media</span></div></div>
+                            <div class="col-sm-4"><div class="dato-editorial"><strong>30-45</strong><span data-i18n="minutosEntrega">minutos entrega</span></div></div>
+                            <div class="col-sm-4"><div class="dato-editorial"><strong>00:00</strong><span data-i18n="viernesSabado">viernes y sabado</span></div></div>
                         </div>
                     </div>
                 </div>
@@ -79,21 +79,21 @@
                     <div class="col-lg-6">
                         <div class="accion-grande accion-reserva">
                             <div>
-                                <p class="subtitulo">Mesa en local</p>
-                                <h2>Reservar mesa</h2>
-                                <p>Elige fecha, hora, personas y zona. Ideal para cenas, comidas y celebraciones.</p>
+                                <p class="subtitulo" data-i18n="mesaLocal">Mesa en local</p>
+                                <h2 data-i18n="reservaTitulo">Reservar mesa</h2>
+                                <p data-i18n="reservaTexto">Elige fecha, hora, personas y zona. Ideal para cenas, comidas y celebraciones.</p>
                             </div>
-                            <a class="btn btn-light" href="paginas/reservar.php">Ir a reservas</a>
+                            <a class="btn btn-light" href="paginas/reservar.php" data-i18n="irReservas">Ir a reservas</a>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="accion-grande accion-pedido">
                             <div>
-                                <p class="subtitulo">A domicilio</p>
-                                <h2>Realizar pedido</h2>
-                                <p>Abre la carta, anade productos al carrito y envia tu pedido directo a cocina.</p>
+                                <p class="subtitulo" data-i18n="domicilio">A domicilio</p>
+                                <h2 data-i18n="pedidoTitulo">Realizar pedido</h2>
+                                <p data-i18n="pedidoTexto">Abre la carta, anade productos al carrito y envia tu pedido directo a cocina.</p>
                             </div>
-                            <a class="btn btn-sushi" href="paginas/pedido.php">Ir a pedidos</a>
+                            <a class="btn btn-sushi" href="paginas/pedido.php" data-i18n="irPedidos">Ir a pedidos</a>
                         </div>
                     </div>
                 </div>
@@ -105,15 +105,34 @@
             <div class="container-xxl">
                 <div class="row g-4 align-items-center">
                     <div class="col-lg-5">
-                        <p class="subtitulo">Horarios</p>
-                        <h2>Abiertos todos los dias</h2>
-                        <p class="texto-suave">Servicio en local, reservas de mesa, recogida y pedidos a domicilio.</p>
+                        <p class="subtitulo" data-i18n="horarios">Horarios</p>
+                        <h2 data-i18n="abiertos">Abiertos todos los dias</h2>
+                        <p class="texto-suave" data-i18n="horariosTexto">Servicio en local, reservas de mesa, recogida y pedidos a domicilio.</p>
                     </div>
                     <div class="col-lg-7">
                         <div class="bloque-cuadrado p-4">
-                            <div class="horario-linea"><span>Lunes a jueves</span><strong>13:00 - 16:00 / 20:00 - 23:30</strong></div>
-                            <div class="horario-linea"><span>Viernes y sabado</span><strong>13:00 - 16:30 / 20:00 - 00:00</strong></div>
-                            <div class="horario-linea"><span>Domingo</span><strong>13:00 - 16:00 / 20:00 - 23:00</strong></div>
+                            <div class="horario-linea"><span data-i18n="lunesJueves">Lunes a jueves</span><strong>13:00 - 16:00 / 20:00 - 23:30</strong></div>
+                            <div class="horario-linea"><span data-i18n="viernesSabadoDia">Viernes y sabado</span><strong>13:00 - 16:30 / 20:00 - 00:00</strong></div>
+                            <div class="horario-linea"><span data-i18n="domingo">Domingo</span><strong>13:00 - 16:00 / 20:00 - 23:00</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa de ubicacion insertado en la web para que el cliente encuentre el restaurante. -->
+        <section class="py-5 ubicacion" id="ubicacion">
+            <div class="container-xxl">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-3">
+                        <p class="subtitulo" data-i18n="ubicacion">Ubicacion</p>
+                        <h2 data-i18n="ubicacionTitulo">Estamos en Valencia</h2>
+                        <p class="texto-suave" data-i18n="ubicacionTexto">Encuentra Shushiara en Carrer de la Mar 24, 46003 Valencia. Puedes venir al local, recoger tu pedido o reservar mesa.</p>
+                        <a class="btn btn-sushi" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Carrer%20de%20la%20Mar%2024%2C%2046003%20Valencia" data-i18n="abrirMapa">Abrir en Maps</a>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="mapa-local">
+                            <iframe class="mapa-iframe" title="Mapa de Shushiara en Valencia" width="100%" height="560" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Carrer%20de%20la%20Mar%2024%2C%2046003%20Valencia&output=embed"></iframe>
                         </div>
                     </div>
                 </div>
@@ -125,14 +144,14 @@
             <div class="container-xxl">
                 <div class="row g-4 align-items-end mb-4">
                     <div class="col-lg-7">
-                        <p class="subtitulo">Opiniones</p>
-                        <h2>Lo que dicen de Shushiara</h2>
+                        <p class="subtitulo" data-i18n="opiniones">Opiniones</p>
+                        <h2 data-i18n="opinionesTitulo">Lo que dicen de Shushiara</h2>
                     </div>
                     <div class="col-lg-5">
                         <div class="puntuacion-global">
                             <strong>4,8/5</strong>
                             <span>★★★★★</span>
-                            <p>Valoracion media de nuestros clientes</p>
+                            <p data-i18n="valoracionClientes">Valoracion media de nuestros clientes</p>
                         </div>
                     </div>
                 </div>
@@ -173,26 +192,26 @@
                 <div class="col-lg-5">
                     <img class="logo-footer" src="recursos/imagenes/logo-shushiara.svg" alt="Shushiara">
                     <p>
-                        <span>Restaurante japones con sushi fresco.</span>
-                        <span>Reservas en local y pedidos a domicilio.</span>
+                        <span data-i18n="footerDescripcion1">Restaurante japones con sushi fresco.</span>
+                        <span data-i18n="footerDescripcion2">Reservas en local y pedidos a domicilio.</span>
                     </p>
                 </div>
                 <div class="col-sm-6 col-lg-2">
-                    <h3>Menu</h3>
-                    <a href="#inicio">Inicio</a>
-                    <a href="#quienes-somos">Quienes somos</a>
-                    <a href="paginas/pedido.php">Carta</a>
-                    <a href="#horarios">Horarios</a>
+                    <h3 data-i18n="menu">Menu</h3>
+                    <a href="#inicio" data-i18n="inicio">Inicio</a>
+                    <a href="#quienes-somos" data-i18n="quienesSomos">Quienes somos</a>
+                    <a href="paginas/pedido.php" data-i18n="carta">Carta</a>
+                    <a href="#horarios" data-i18n="horarios">Horarios</a>
                 </div>
                 <div class="col-sm-6 col-lg-2">
-                    <h3>Servicios</h3>
-                    <a href="paginas/reservar.php">Reservar mesa</a>
-                    <a href="paginas/pedido.php">Pedido a domicilio</a>
-                    <a href="paginas/pedido.php">Recogida en local</a>
-                    <a class="enlace-interno" href="administracion/login.php">Acceso interno</a>
+                    <h3 data-i18n="servicios">Servicios</h3>
+                    <a href="paginas/reservar.php" data-i18n="reservarMesa">Reservar mesa</a>
+                    <a href="paginas/pedido.php" data-i18n="pedidoDomicilio">Pedido a domicilio</a>
+                    <a href="paginas/pedido.php" data-i18n="recogidaLocal">Recogida en local</a>
+                    <a class="enlace-interno" href="administracion/login.php" data-i18n="accesoInterno">Acceso interno</a>
                 </div>
                 <div class="col-lg-3">
-                    <h3>Contacto</h3>
+                    <h3 data-i18n="contacto">Contacto</h3>
                     <ul class="footer-lista">
                         <li>Carrer de la Mar 24, 46003 Valencia</li>
                         <li>600 123 456</li>
@@ -204,12 +223,17 @@
                 </div>
             </div>
             <div class="pie-inferior">
-                <span>© 2026 Shushiara. Proyecto de pedidos y reservas.</span>
-                <span>Sushi tradicional con alma moderna.</span>
+                <span data-i18n="copyright">© 2026 Shushiara. Proyecto de pedidos y reservas.</span>
+                <span data-i18n="lema">Sushi tradicional con alma moderna.</span>
+                <div class="selector-idioma selector-idioma-footer" aria-label="Idioma">
+                    <button class="bandera-boton" type="button" data-language="es" aria-label="Español"><svg class="bandera-svg" viewBox="0 0 36 24" aria-hidden="true"><rect width="36" height="24" fill="#c60b1e"/><rect y="6" width="36" height="12" fill="#ffc400"/></svg></button>
+                    <button class="bandera-boton" type="button" data-language="en" aria-label="English"><svg class="bandera-svg" viewBox="0 0 36 24" aria-hidden="true"><rect width="36" height="24" fill="#012169"/><path d="M0 0 36 24M36 0 0 24" stroke="#fff" stroke-width="5"/><path d="M0 0 36 24M36 0 0 24" stroke="#c8102e" stroke-width="3"/><path d="M18 0v24M0 12h36" stroke="#fff" stroke-width="8"/><path d="M18 0v24M0 12h36" stroke="#c8102e" stroke-width="4.8"/></svg></button>
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="recursos/js/idiomas.js"></script>
 </body>
 </html>

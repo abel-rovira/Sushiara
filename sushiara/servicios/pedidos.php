@@ -228,7 +228,8 @@ try {
 
     // Insertamos la cabecera del pedido.
     $orderStatement = $pdo->prepare(
-        'INSERT INTO pedidos (nombre_cliente, telefono_cliente, direccion_cliente, tipo_entrega, fecha_entrega, hora_entrega, metodo_pago, pago_simulado, referencia_pago, notas, subtotal, gastos_envio, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+        'INSERT INTO pedidos (nombre_cliente, telefono_cliente, direccion_cliente, tipo_entrega, fecha_entrega, hora_entrega, metodo_pago, pago_simulado, referencia_pago, notas, 
+        subtotal, gastos_envio, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
     );
     $orderStatement->execute([
         $nombreCliente,

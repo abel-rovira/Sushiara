@@ -163,7 +163,10 @@ function pintarCarrito() {
 
   // Si no hay articulos, mostramos un mensaje sencillo.
   if (carrito.size === 0) {
-    cartItems.innerHTML = '<p class="empty-cart">El carrito esta vacio.</p>';
+    cartItems.innerHTML = '<p class="empty-cart" data-i18n="carritoVacio">El carrito esta vacio.</p>';
+    if (typeof aplicarIdioma === 'function') {
+      aplicarIdioma(localStorage.getItem('shushiara_idioma') || 'es');
+    }
     return;
   }
 

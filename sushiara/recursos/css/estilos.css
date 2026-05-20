@@ -65,6 +65,62 @@ a {
   color: var(--blanco);
 }
 
+.selector-idioma {
+  display: inline-flex;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+}
+
+.selector-idioma button {
+  min-width: 38px;
+  height: 34px;
+  color: rgba(255, 255, 255, 0.78);
+  background: transparent;
+  border: 0;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.selector-idioma button.active,
+.selector-idioma button:hover {
+  color: var(--negro);
+  background: var(--blanco);
+}
+
+.selector-idioma-footer {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  border: 0;
+}
+
+.selector-idioma-footer .bandera-boton {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  min-width: 42px;
+  height: 28px;
+  padding: 0;
+  overflow: hidden;
+  appearance: none;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.52);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.selector-idioma-footer .bandera-svg {
+  display: block;
+  width: 36px;
+  height: 24px;
+}
+
+.selector-idioma-footer .bandera-boton.active,
+.selector-idioma-footer .bandera-boton:hover {
+  outline: 2px solid var(--blanco);
+  outline-offset: 2px;
+}
+
 .btn,
 .form-control,
 .form-select,
@@ -310,6 +366,46 @@ a {
 
 .horarios {
   background: var(--blanco);
+}
+
+.ubicacion {
+  background: #f3f3f3;
+  padding-top: 5.5rem !important;
+  padding-bottom: 5.5rem !important;
+}
+
+.ubicacion h2 {
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.ubicacion .texto-suave {
+  max-width: 34rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.6rem;
+}
+
+.mapa-local {
+  width: 100%;
+  min-height: 560px;
+  border: 1px solid #d8d8d8;
+  background: var(--blanco);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+}
+
+.mapa-local iframe,
+.mapa-iframe {
+  display: block;
+  width: 100% !important;
+  min-width: 100%;
+  height: 560px !important;
+  min-height: 560px;
+  border: 0;
 }
 
 .horario-linea {
@@ -741,6 +837,7 @@ a {
 
 .pie-inferior {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 18px;
   margin-top: 42px;
@@ -835,6 +932,59 @@ a {
   margin: 18px 0 0;
   padding-left: 18px;
   color: var(--gris);
+}
+
+.reserva-extra {
+  background: var(--blanco);
+}
+
+.reserva-extra h2 {
+  max-width: 620px;
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.reserva-consejos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  padding: 16px;
+  background:
+    linear-gradient(135deg, rgba(185, 28, 28, 0.06), transparent 36%),
+    var(--blanco);
+}
+
+.reserva-consejos div {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  min-height: 210px;
+  padding: 24px;
+  background: #f7f7f7;
+  border: 1px solid #d8d8d8;
+  border-top: 5px solid var(--rojo);
+}
+
+.reserva-consejos span {
+  color: var(--rojo);
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.reserva-consejos strong {
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.reserva-consejos p {
+  margin: 0;
+  color: var(--gris);
+  line-height: 1.6;
 }
 
 .admin-page main {
@@ -1114,6 +1264,14 @@ a {
     width: auto;
     white-space: nowrap;
   }
+
+  .reserva-consejos {
+    grid-template-columns: 1fr;
+  }
+
+  .reserva-consejos div {
+    min-height: auto;
+  }
 }
 
 @media (max-width: 680px) {
@@ -1171,5 +1329,59 @@ a {
 
   .login-logo {
     width: 132px;
+  }
+}
+
+/* Refuerzo visual de las tarjetas de reserva. Se deja al final para evitar cache
+   o reglas anteriores que puedan dejar esta zona como una lista plana. */
+.reserva-extra .bloque-cuadrado.reserva-consejos {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  padding: 18px !important;
+  background: linear-gradient(135deg, rgba(185, 28, 28, 0.08), rgba(255, 255, 255, 1) 45%) !important;
+  border: 1px solid #d8d8d8 !important;
+}
+
+.reserva-extra .bloque-cuadrado.reserva-consejos > div {
+  display: flex !important;
+  min-height: 220px !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+  padding: 26px !important;
+  background: #f8f8f8 !important;
+  border: 1px solid #d8d8d8 !important;
+  border-top: 6px solid var(--rojo) !important;
+}
+
+.reserva-extra .bloque-cuadrado.reserva-consejos > div > span {
+  display: block !important;
+  color: var(--rojo) !important;
+  font-size: 2.8rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+}
+
+.reserva-extra .bloque-cuadrado.reserva-consejos > div > strong {
+  display: block !important;
+  color: var(--negro) !important;
+  font-size: 1rem !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+}
+
+.reserva-extra .bloque-cuadrado.reserva-consejos > div > p {
+  margin: 0 !important;
+  color: var(--gris) !important;
+  line-height: 1.65 !important;
+}
+
+@media (max-width: 991px) {
+  .reserva-extra .bloque-cuadrado.reserva-consejos {
+    grid-template-columns: 1fr !important;
+  }
+
+  .reserva-extra .bloque-cuadrado.reserva-consejos > div {
+    min-height: auto !important;
   }
 }
